@@ -461,7 +461,7 @@
 //     };
 //
 //     // Add new task
-//     todos.push(newTask); // push, pop, unshift, shift
+//     todos.push(newTask);   // push, pop, unshift, shift
 //     return todos;
 // }
 //
@@ -474,21 +474,14 @@
 //     let todo;  //
 //
 //     for (let i = 0; i < todos.length; i++ ) {
-//         if (todos[i].id === id) {                         // а если id совпал то мы его получим
-//             todo = todos[i];                                записали текущий елемент которыйtodos.splice(i, 1);                            // удаляем из массива(c какого индекса - мы его нашли , кол удаляемых элиз массива ,на место можем что то припесать  , , )
+//         if (todos[i].id === id) {                          // а если id совпал то мы его получим
+//             todo = todos[i];                               // записали текущий елемент которыйtodos.splice(i, 1);                            // удаляем из массива(c какого индекса - мы его нашли , кол удаляемых элиз массива ,на место можем что то припесать  , , )
 //             break;
 //         }
 //     }
 //
 //     return todo || 'task not found';
 // }
-
-
-
-
-
-// hw
-
 
 
 

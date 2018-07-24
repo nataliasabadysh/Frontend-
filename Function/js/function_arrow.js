@@ -90,21 +90,21 @@
 
 // Фун-я Как ЗНАЧЕНИЯ МАССИВА
 
-const array = [
-    a => a + a,     //3+3=   6
-    a => a * a,     //3*3=   9
-    a => a / a,     //3/3=   1
-    a => a ** a     //3**3=  27
-];
-
-const arihpmetic = (arr, val) => arr.map(elem => elem(val));  // elem -  это ссылка на тело функ-и
-
-// map = for
-//Вызвали фун-ю /   передали массив / число и применяет к массиву это число
-
-console.log(arihpmetic(array, 3));   //[6, 9, 1, 27]
-
-
-const add = array[0];  // 2 + 2 = 4
-
-console.log(add(2));  // function add
+// const array = [  // Фун-я Как ЗНАЧЕНИЯ МАССИВА
+//     a => a + a,     //3+3=   6
+//     a => a * a,     //3*3=   9
+//     a => a / a,     //3/3=   1
+//     a => a ** a     //3**3=  27
+// ];
+//
+// const arihpmetic = (arr, val) => arr.map(elem => elem(val));  // elem -  это ссылка на тело функ-и
+//
+// // map = for
+// //Вызвали фун-ю /   передали массив / число и применяет к массиву это число
+//
+// console.log(arihpmetic(array, 3));   //[6, 9, 1, 27]
+//
+//
+// const add = array[0];  // 2 + 2 = 4
+//
+// console.log(add(2));  // function add
