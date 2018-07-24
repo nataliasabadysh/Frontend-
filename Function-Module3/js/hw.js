@@ -215,3 +215,41 @@ console.log(removeFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)); // [12, 8, 17]
         возвращая указанные строки. Больше ничего не делает.
 */
 
+
+
+// nata
+
+
+const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+
+function checkLoginValidity(login){
+    if(login.length >= 4 && login.length <= 16){
+        return true;
+    }
+    return false;
+}
+
+functioncheckIfLoginExists(logins, login){
+    // includet .. ?
+}
+
+}
+
+function addLogin(logins, login){
+    // - Получает новый логин и массив всех логинов как аргументы
+    //
+    // - Проверяет валидность логина используя вспомогательную функцию checkLoginValidity
+    //
+    // - Если логин не валиден, прекратить исполнение функции addLogin
+    // и вернуть строку 'Ошибка! Логин должен быть от 4 до 16 символов'
+    //
+    // - Если логин валиден, функция addLogin проверяеть уникальность логина
+    // с помощью функции checkIfLoginExists
+    //
+    // - Если checkIfLoginExists вернет false, addLogin добавляет новый логин
+    // в logins и возвращает строку 'Логин успешно добавлен!'
+    //
+    // - Если checkIfLoginExists вернет true, тогда addLogin не добавляет
+    // логин в массив и возвращает строку 'Такой логин уже используется!'
+
+}
