@@ -229,11 +229,7 @@ function checkLoginValidity(login){
     return false;
 }
 
-functioncheckIfLoginExists(logins, login){
-    // includet .. ?
-}
-
-}
+// functioncheckIfLoginExists(logins, login){};
 
 function addLogin(logins, login){
     // - Получает новый логин и массив всех логинов как аргументы
@@ -253,3 +249,4 @@ function addLogin(logins, login){
     // логин в массив и возвращает строку 'Такой логин уже используется!'
 
 }
+
