@@ -217,7 +217,7 @@ console.log(removeFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)); // [12, 8, 17]
 
 
 
-// nata
+// Module - 3 Home Work
 
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
@@ -232,21 +232,20 @@ function checkLoginValidity(login){
 // functioncheckIfLoginExists(logins, login){};
 
 function addLogin(logins, login){
-    // - Получает новый логин и массив всех логинов как аргументы
-    //
-    // - Проверяет валидность логина используя вспомогательную функцию checkLoginValidity
-    //
-    // - Если логин не валиден, прекратить исполнение функции addLogin
-    // и вернуть строку 'Ошибка! Логин должен быть от 4 до 16 символов'
-    //
-    // - Если логин валиден, функция addLogin проверяеть уникальность логина
-    // с помощью функции checkIfLoginExists
-    //
-    // - Если checkIfLoginExists вернет false, addLogin добавляет новый логин
-    // в logins и возвращает строку 'Логин успешно добавлен!'
-    //
-    // - Если checkIfLoginExists вернет true, тогда addLogin не добавляет
-    // логин в массив и возвращает строку 'Такой логин уже используется!'
 
+// - Получает новый логин и массив всех логинов как аргументы
+    const newLoggin  = login;
+
+    if (!checkLoginValidity(login)) return new Error('login required');
+    break;   // - Если логин не валиден, прекратить исполнение функции addLogin   ??
+
+    if(checkLoginValidity(logins)){
+         function checkIfLoginExists(logins === login) {
+            logins.push(login);
+            return 'Логин успешно добавлен!';    // в logins и возвращает строку 'Логин успешно добавлен!'
+        }
+        return 'Такой логин уже используется!';
+    }
 }
+console.log();
 
