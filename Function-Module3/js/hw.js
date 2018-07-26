@@ -236,6 +236,20 @@ console.log(removeFromArray([12, 4, 3, 8, 17], 3, 29, 18, 4)); // [12, 8, 17]
 // Module - 3 Home Work
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+//
+
+// function  addLogin(logins, login){
+//
+//     if (!checkLoginValidity(login)) return 'Такой логин уже используется!';
+//
+//     return checkLoginValidity(login) ? 'Логин успешно добавлен!':'Ошибка! Логин должен быть от 4 до 16 символов'
+//
+// }
+// console.log();
+//
+//
+
+const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
 function checkLoginValidity(login){
     if(login.length >= 4 && login.length <= 16 && login !== logins){
@@ -243,12 +257,20 @@ function checkLoginValidity(login){
     }
     return false;
 }
-function  addLogin(logins, login){
 
-    if (!checkLoginValidity(login)) return 'Такой логин уже используется!';
+function checkIfLoginExists(logins, login){
+    return logins.includes(login)
+};
 
-    return checkLoginValidity(login) ? 'Логин успешно добавлен!':'Ошибка! Логин должен быть от 4 до 16 символов'
 
+function addLogin(logins, login){
+    if (function checkLoginValidity(login) {
+            if(!checkIfLoginExists(logins, login)) {
+                return '';
+            }
+            return ...
+        }
+        return ...
 }
-console.log();
 
+addLogin(logins, login); (edited)
