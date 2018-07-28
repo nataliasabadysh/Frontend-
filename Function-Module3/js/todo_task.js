@@ -24,9 +24,9 @@ function addTask(text) {
     };
 
     // Add new task
-    todos.push(newTask);
+     todos.push(newTask);
 
-    return todos;
+    return todos.slice(); // оисть он вернет копию всего масиива
 }
 
 // Delete task
@@ -70,8 +70,8 @@ editTask(1, "learn React");
 
 // В консоле
 
-//addTask('New task')
-//deleteTask(2)
-//editTask(1, 'Learn  Advansed Angular')
+// addTask('New task')
+// deleteTask(2)
+// editTask(1, 'Learn  Advansed Angular')
 
 

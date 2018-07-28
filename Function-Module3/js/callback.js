@@ -120,51 +120,6 @@
 // console.log(foo('Natasha' , handler2)); // 78971169711510497
 //
 
-// // ============================ Методы массивов  push
-//
-// let stringArr = ['one', 'two'];
-// stringArr.push('tree');
-// console.log(stringArr);// ["one", "two", "tree"]
-//
-// // ============================ Методы массивов pop
-// let stringArr = ['one', 'two'];
-// console.log(stringArr.pop());   // two
-// console.log(stringArr);      // ["one"]
-//
-// // ============================ Методы массивов unshift
-// let stringArr2 = ['one', 'two'];
-// console.log(stringArr2.unshift('Numbers :'));   //3
-// console.log(stringArr2);                       // ["Numbers :", "one", "two"]
-//
-// // ============================ Методы массивов shift
-// let stringArr3 = ['one', 'two'];
-// console.log(stringArr3.shift('two'));           // one
-// console.log(stringArr3);                       // ["two"]
-
-
-// ============================== Методы массивов  split
-// из строки в массив
-
-// let str = 'Hi,  my name is Natalia';
-//
-// console.log(str.split()); //  ["Hi,  my name is Natalia"]
-// console.log(str.split(' ')); //  ["Hi,", "", "my", "name", "is", "Natalia"]
-//
-// console.log(str.split('')); // "H", "i", ",", " ", " ",....  "l", "i", "a"]
-
-// ============================ Методы массивов  join
-// сделать массиив -> строки
-
-// let stringArr = ['one', 'two', 'tree'];
-//
-// console.log(stringArr.join()); // one,two,tree
-// console.log(stringArr.join(' ')); // one two tree
-// console.log(stringArr.join('')); // onetwotree
-
-
-
-
-
 //====  +++ === ОПИСАНИЕ
 // фун-я принемает другую фун-ю  в качестве аргументов
 // возращает фун-ю

@@ -118,5 +118,124 @@ editTask(1, "learn React");
 //deleteTask(2)
 //editTask(1, 'Learn  Advansed Angular')
 
+// module 3
+//
+//
+// //============================================= 2
+// const formatString = function(str) {
+//     if (str.length <= 40) {
+//         return str;
+//     }
+//     return str.slice(0, 40) + "...";
+// };
+//
+// //const formatString = (str) => (str.length <= 40) ? str : str.slice(0, 40) + "...";
+//
+// //Curabitur ligula sapien, tincidunt non.
+// console.log(formatString("Curabitur ligula sapien, tincidunt non."));
+//
+// //Vestibulum facilisis, purus nec pulvinar...
+// console.log(formatString("Vestibulum facilisis, purus nec pulvinar iaculis."));
+//
+// //Curabitur ligula sapien.
+// console.log(formatString("Curabitur ligula sapien."));
+//
+// //Nunc sed turpis. Curabitur a felis in nu...
+// console.log(formatString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique."));
+// //============================================= 3
+//
+// const checkForSpam = function(str) {
+//     const strLow = str.toLowerCase();
+//     if (strLow.includes("spam") || strLow.includes("sale")) {
+//         return true;
+//     }
+//     return false;
+// };
+//
+// // const checkForSpam = (str) => str.toLowerCase().includes("spam") || str.toLowerCase().includes("sale");
+// console.log(checkForSpam('Latest technology news')); // false
+// console.log(checkForSpam('JavaScript weekly newsletter')); // false
+// console.log(checkForSpam('Get best sale offers now!')); // true
+// console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+// //====================================== 5
+// //
+// // const uniqueNumbers = [2, 1, 4, 9];
+// // const addUniqueNumbers = function(...addArr) {
+// //     if (!Array.isArray(addArr)) {
+// //         return null;
+// //     }
+// //     let wasAded = 0;
+// //     for (let elemAdd of addArr) {
+// //         if (!uniqueNumbers.includes(elemAdd)) {
+// //             uniqueNumbers.push(elemAdd);
+// //             wasAded += 1;
+// //         }
+// //     }
+// //     return wasAded;
+// // };
+// // // [2, 1, 4, 9, 3]
+// // addUniqueNumbers(1, 2, 3);
+// // console.log(uniqueNumbers);
+// //
+// // // [2, 1, 4, 9, 3, 12, 19]
+// // addUniqueNumbers(12, 2, 3, 19);
+// // console.log(uniqueNumbers);
+// //
+// // // [2, 1, 4, 9, 3, 12, 19, 5, 8]
+// // addUniqueNumbers(4, 5, 12, 3, 1, 2, 8);
+// // console.log(uniqueNumbers);
+//
+// //====================================== 6
+//
+// const findLargestNumber = function(numbers) {
+//     if (!Array.isArray(numbers) || Number.isNaN(Number(numbers[0]))) {
+//         return NaN;
+//     }
+//     let maxNumber = numbers[0];
+//     for (let i = 1; i < numbers.length; i += 1) {
+//         if (!Number.isNaN(Number(numbers[i]))) {
+//             if (numbers[i] > maxNumber) {
+//                 maxNumber = numbers[i];
+//             }
+//         }
+//     }
+//     return maxNumber;
+// };
+// console.log(findLargestNumber([1, 2, 3])); // вернет 3
+// console.log(findLargestNumber([27, 12, 18, 5])); // вернет 27
+// console.log(findLargestNumber([31, 128, 14, 74])); // вернет 128
+//
+
+//============================ HW module -3
+
+//let logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
+//
+//
+// function checkLoginValidity(login){
+//     if(login.length >= 4 && login.length <= 16){
+//         return true;
+//     }
+//     return false;
+// }
+// function checkIfLoginExists(logins, login){
+//     return logins.includes(login)
+// }
+//
+// function addLogin(logins, login){
+//     if (function checkLoginValidity(login) {
+//             if(!checkIfLoginExists(logins, login)) {
+//                 logins.push(login);
+//                 return  'Логин успешно добавлен!';
+//             }
+//             return 'Ошибка! Логин должен быть от 4 до 16 символов';
+//         };
+//     return 'Такой логин уже используется!';
+// };
+//
+// console.log(logins);
+// addLogin('Mango');
+
+//==========
+
 
 
