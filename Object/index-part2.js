@@ -104,6 +104,7 @@ const workers =[
     { name: 'Ajax', salary: 50,},
 ];
 for (const worker of workers){ // ссылка на наш обьект
+
     console.log(workers); // получим 3 обьекта
     console.log( worker.salary ); // получим все зп   // 50 50 50
 }

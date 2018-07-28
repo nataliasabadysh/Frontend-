@@ -1,4 +1,5 @@
 // //========== Object Part-1
+
 // // Динамические
 // // string :  String
 

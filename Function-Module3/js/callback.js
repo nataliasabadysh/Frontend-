@@ -48,15 +48,258 @@
 // console.log(add(2));  // function add
 
 
-// замыкания
+
+
+// ============== call back - анонимные фун-и - обраного вызова  (easycode les5)
+
+// function parent(firsеName ) {
+//     return function (secondName) {
+//         return 'Hello ' +  firsеName + '..' + secondName;
+//     };
+// }
+// console.log(parent('Nata')('Sabadysh')); // Hello Nata..Sabadysh
+//
+// const parentFun = parent ('Sean') ;
+// console.log(parentFun('Hahhesy'));   //Hello Sean..Hahhesy
 
 
 
 
 
+// 1  вывели отдельно в фкнк и предали имя _ тоисть тело фун-и
+
+
+// function foo(string, func) {
+//     let result = '';
+//     console.log(func());
+//     for (let char of string){
+//         console.log(char);
+//     }
+//     return result;
+// }
+// function handler () {
+//     console.log('Hello i am  Function');
+// }
+// foo('hello World' , handler);
+//
+// // 2 - передали ври визове фун-и вторим арг функцию
+//
+// function foo(string, func) {
+//     let result = '';
+//
+//     console.log(func());
+//     for (let char of string){
+//         console.log(char);
+//     }
+//     return result;
+// }
+// foo('hello World' ,  function () {
+//     console.log('Hello i am  Function');
+// });
 
 
 
+// 2  вторая функция может принемать неколько задач для каждого конкретного случас handler и handler2 ..
+
+// function foo(string, func) {
+//     let result = '';
+//     for (let char of string){
+//         result += func (char);
+//     }
+//     return result;
+// }
+// // handler могут быть разными
+//
+// function handler (symbol) {
+//     return symbol.toUpperCase() + '-';
+// }
+// function handler2 (symbol) {
+//     return symbol.charCodeAt(0);
+// }
+// console.log(foo('Natasha' , handler));  // N-A-T-A-S-H-A-
+// console.log(foo('Natasha' , handler2)); // 78971169711510497
+//
+
+// // ============================ Методы массивов  push
+//
+// let stringArr = ['one', 'two'];
+// stringArr.push('tree');
+// console.log(stringArr);// ["one", "two", "tree"]
+//
+// // ============================ Методы массивов pop
+// let stringArr = ['one', 'two'];
+// console.log(stringArr.pop());   // two
+// console.log(stringArr);      // ["one"]
+//
+// // ============================ Методы массивов unshift
+// let stringArr2 = ['one', 'two'];
+// console.log(stringArr2.unshift('Numbers :'));   //3
+// console.log(stringArr2);                       // ["Numbers :", "one", "two"]
+//
+// // ============================ Методы массивов shift
+// let stringArr3 = ['one', 'two'];
+// console.log(stringArr3.shift('two'));           // one
+// console.log(stringArr3);                       // ["two"]
+
+
+// ============================== Методы массивов  split
+// из строки в массив
+
+// let str = 'Hi,  my name is Natalia';
+//
+// console.log(str.split()); //  ["Hi,  my name is Natalia"]
+// console.log(str.split(' ')); //  ["Hi,", "", "my", "name", "is", "Natalia"]
+//
+// console.log(str.split('')); // "H", "i", ",", " ", " ",....  "l", "i", "a"]
+
+// ============================ Методы массивов  join
+// сделать массиив -> строки
+
+// let stringArr = ['one', 'two', 'tree'];
+//
+// console.log(stringArr.join()); // one,two,tree
+// console.log(stringArr.join(' ')); // one two tree
+// console.log(stringArr.join('')); // onetwotree
+
+
+
+
+
+//====  +++ === ОПИСАНИЕ
+// фун-я принемает другую фун-ю  в качестве аргументов
+// возращает фун-ю
+
+//Создали функцию
+// эта фун-я принемает параметр firsеName
+// принемает secondName
+// и возвращает строчку " 'Hello ' +  firsеName + '..' + secondName; "
+
+ // function parent(firsеName ) {  // эта фун-я принемает
+ //     // function body
+ //    return function (secondName) {  // анонимная фун-я не даем имея и она принемает secondName
+ //        // function body
+ //        return 'Hello ' +  firsеName + '..' + secondName;
+ //    };
+ // }
+//  //console.log(parent('Nata')); // parent - возвращает целую функцию
+// // Мы сразу вызвали вторую функцию, после радительской функции
+
+  // console.log(parent('Nata')('Sabadysh')); // Hello Nata..Sabadysh
+
+// // радительскую фун-ю в переменную
+// //const parentFun = parent ('Denis') ;  //  переменная = вызову второй функции  +  передали Имя
+// // в переменной  parentFun =  будет то что указанно в parent  return ====
+// // ====>  return function (secondName) {return 'Hello ' +  firsеName + '..' + secondName; };
+
+// const parentFun = parent ('Sean') ;// we got the function parent
+// console.log(parentFun); // function (secondName) {return 'Hello ' +  firsеName + '..' + secondName; };
+// console.log(parentFun('Hahhesy')); // function (secondName) {return 'Hello ' +  firsеName + '..' + secondName; };
+// //console.log(parentFun('Hahhesy')); ====>  Hello Sean..Hahhesy
+
+
+// ============== call back  Functionкоторые принемают в качестве арг другие function  (easycode les5)
+
+
+// function foo(string, func) {    // принемает строчку и  вторую фуннкцию
+//     let result = '';            // создали переменную которую мы возвращаем
+//
+//     console.log(func());        // Hello i am  Function
+// // Но она возвращает Undefined
+//
+//
+//    //  будем переберать нашу строчку
+//     for (let char of string){
+//         console.log(char);
+//         // получим каждый символ в новой строчке
+//     }
+//     return result;
+// }
+// // Вызвали функцию Вторым аргументом передаем вторую нашу фун-ю
+//
+//
+//
+// function handler () {
+//     console.log('Hello i am  Function');
+// }
+// foo('hello World' , handler);
+// // можно исползовать стрелочные функции
+
+// 1  вывели отдельно в фкнк и предали имя _ тоисть тело фун-и
+
+
+// function foo(string, func) {
+//     let result = '';
+//     console.log(func());
+//     for (let char of string){
+//         console.log(char);
+//     }
+//     return result;
+// }
+// function handler () {
+//     console.log('Hello i am  Function');
+// }
+// foo('hello World' , handler);
+
+// 2 - передали ври визове фун-и вторим арг функцию
+
+// function foo(string, func) {
+//     let result = '';
+//     console.log(func());
+//     for (let char of string){
+//         console.log(char);
+//     }
+//     return result;
+// }
+// foo('hello World' ,  function () {
+//     console.log('Hello i am  Function');
+// }
+
+// ============== call back  Functionкоторые принемают в качестве арг другие function  (easycode les5)
+// function foo(string, func) {
+//     let result = '';
+//     for (let char of string){
+//         result += func (char);
+//     }
+//     return result;
+// }
+// // handler могут быть разными
+//
+// function handler (symbol) {
+//     return symbol.toUpperCase() + '-';
+// }
+// function handler2 (symbol) {
+//     return symbol.charCodeAt(0);
+// }
+// console.log(foo('Natasha' , handler));  // N-A-T-A-S-H-A-
+// console.log(foo('Natasha' , handler2)); // 78971169711510497
+
+
+/// ОЬЯСНЕНИЕ
+
+// из цыкла переменная char
+// попав  в фун-ю func
+// перенеслать в фун-ю handler под именем symbol
+
+
+
+// function foo(string, func) {
+//     let result = '';
+//     // console.log(func());
+//
+//     //будем вызыват на каждой итерации
+//     for (let char of string){
+//         console.log(func(char));
+// // на каждой итерации вызываем символ
+//         func(char); // передаем один символ
+//     }
+//     return result;
+// }
+// function handler (symbol) {
+//     //получаем один символ
+//     return symbol.toUpperCase() + '-';
+//     // return -значит вернет результат
+// }
+// foo('Nat' , handler);
 
 
 
