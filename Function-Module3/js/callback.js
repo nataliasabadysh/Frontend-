@@ -257,8 +257,37 @@
 // foo('Nat' , handler);
 
 
+// ===== callback   (modul 5)
+
+const greet = (name) =>{
+    console.log('helo' + ' ' + name);
+};
+
+const doStuff = (message, callback) => {
+    const input = prompt(message);
+    callback(input);
+};
+doStuff('Давай имя !', greet);  // message = 'Давай имя'
 
 
+
+
+// Функция без callback
+
+const doStuff = (message, callback) => {
+    const input = prompt(message);
+    callback(input);
+};
+
+doStuff('Давай имя !', name => {  // 1й и 2й аргумет для функции - doStuff
+    console.log('helo' + ' ' + name);
+});
+
+// =========// getUsers
+
+// Передается  как аргумент в  другую фун-ю
+// getUsersById('qwqw', updateUI );
+// - updateUI - callback
 
 
 
