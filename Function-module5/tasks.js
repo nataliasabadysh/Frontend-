@@ -98,11 +98,11 @@
 
 // нужно взять n-е количество полей
 
-const user = {
-    name: 'Mango',
-    age:2,
-    email: 'mango@gmail.com',
-};
+// const user = {
+//     name: 'Mango',
+//     age:2,
+//     email: 'mango@gmail.com',
+// };
 
 
 // Если НЕ используем Destructuring

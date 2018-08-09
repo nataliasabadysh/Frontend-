@@ -3,6 +3,8 @@
 
 // lesson -5 Easycode
 
+// function -  this is a object
+
 // ======================function declaration
 
 function calc() {

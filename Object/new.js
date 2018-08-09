@@ -1,5 +1,25 @@
 'use strict';
 
+//1.  Оператор new создает пустой обькт ( место в памяти )
+//2.  Оператор new вызывает фун-ю - констркутор в контексте этого обькта
+
+//3. this = {}  and  return this - default - возращает этот обьект
+
+
+// функция конструктор  Имя с большой буквы
+//=========
+
+//
+// function Manager() {
+//     // this = {}
+//     this.name = 'qweqwe';
+//     // return this - возращает этот обьект
+// }
+// const mango = new Manager();
+// console.log(mango); // Manager {name: "qweqwe"}
+
+
+//=========
 // function User(name, age, icActive) {
 //     this.name = name;
 //     this.age = age;
@@ -86,47 +106,94 @@
 
 
 // =============
+//
+// function User({           // Деструктуризация
+//     name= 'Guest',
+//     age =18, isActive = false,
+//     friends =0,
+//     isAdmin = false
+//     }) {
+//     const message = 'Hello';
+//     this.name = name;
+//     this.age = age;
+//     this.friends = friends;
+//     this.isActive = isActive;
+//     this.isAdmin = isAdmin;
+//
+//     this.showName = function () {
+//     console.log(message + ' ' + this.name);
+//     };
+//     this.addAge = function(addA){
+//     this.age += addA;
+//     };
+// }
+// const mango = new User({
+//     name: 'Mongo',
+//     age: 2,
+//     isActive: true,
+//     isAdmin: true,
+//     friends : 10,
+// });
+// mango.showName();
+// mango.addAge(50);
+// console.log(mango);
+//
+// const poly = new User({
+//     name: 'Poly',
+//     age: 2,
+//     isActive: true,
+//     isAdmin: false,
+//     friends : 10,
+// });
+//
+// console.log(poly);
+// poly.showName();
 
-function User({           // Деструктуризация
-    name= 'Guest',
-    age =18, isActive = false,
-    friends =0,
-    isAdmin = false
-    }) {
-    const message = 'Hello';
+
+//======================
+//1.  Оператор new создает пустой обькт ( место в памяти )
+//2.  Оператор new вызывает фун-ю - констркутор в контексте этого обькта
+
+//- 1
+// function Manager() {
+//         this.name = 'Mango';
+//         this.age = 23;
+// }
+// const mango = new Manager(); // Manager {name: "Mango", age: 23}
+// console.log(mango);
+
+//- 2
+// function Manager(name, age) {
+//         this.name = name;
+//         this.age = age;
+// }
+// const mango = new Manager('Nata', 25); //  Manager {name: "Nata", age: 25}
+// console.log(mango);
+//
+// const poly = new Manager('Poly', 20); //  Manager {name: "Poly", age: 20}
+// console.log(poly);
+
+// - 3
+
+// function Manager(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+// const mango = new Manager('Nata', 25); //  Manager {name: "Nata", age: 25}
+// console.log(mango);
+//
+// const poly = new Manager('Poly', 20); //  Manager {name: "Poly", age: 20}
+// console.log(poly);
+
+// -4
+
+function Manager(name) {
     this.name = name;
-    this.age = age;
-    this.friends = friends;
-    this.isActive = isActive;
-    this.isAdmin = isAdmin;
-
-    this.showName = function () {
-    console.log(message + ' ' + this.name);
-    };
-    this.addAge = function(addA){
-    this.age += addA;
-    };
+    this.sales = 0;
 }
-const mango = new User({
-    name: 'Mongo',
-    age: 2,
-    isActive: true,
-    isAdmin: true,
-    friends : 10,
-});
-mango.showName();
-mango.addAge(50);
+const mango = new Manager('Nata', 25); //  Manager {name: "Nata", age: 25}
 console.log(mango);
 
-const poly = new User({
-    name: 'Poly',
-    age: 2,
-    isActive: true,
-    isAdmin: false,
-    friends : 10,
-});
-
+const poly = new Manager('Poly', 20); //  Manager {name: "Poly", age: 20}
 console.log(poly);
-poly.showName();
-
 
