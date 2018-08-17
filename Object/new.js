@@ -187,13 +187,27 @@
 
 // -4
 
-function Manager(name) {
-    this.name = name;
-    this.sales = 0;
-}
-const mango = new Manager('Nata', 25); //  Manager {name: "Nata", age: 25}
-console.log(mango);
+// function Manager(name) {
+//     this.name = name;
+//     this.sales = 0;
+// }
+// const mango = new Manager('Nata', 25); //  Manager {name: "Nata", age: 25}
+// console.log(mango);
+//
+// const poly = new Manager('Poly', 20); //  Manager {name: "Poly", age: 20}
+// console.log(poly);
 
-const poly = new Manager('Poly', 20); //  Manager {name: "Poly", age: 20}
-console.log(poly);
+// ============== new Array()    / object / string / number
 
+
+const number = new Array(1, 2, 3, 4, 6);
+
+Array.prototype.getFirst = function () { // getFirst - будет в прототипе
+
+    console.log('inside this ,', this);
+    return this[0];
+};
+console.log(
+    [2, 3, ].getFirst() // 2
+);
+console.log(number.getFirst()); // 1
