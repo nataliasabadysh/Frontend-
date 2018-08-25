@@ -153,7 +153,7 @@
 // }, 0);
 // console.log('Price is',sum); // 120
 
-// --========================= reduse With DOM
+// --========================= reduse With DOM-BOM
 
 // const listItem = ['HTML', 'CSS', 'JS', 'React'];
 //

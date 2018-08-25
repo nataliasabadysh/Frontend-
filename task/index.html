@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id ="canvas"></canvas>
+<script type="text/javascript">
+
+
+    let mouse = {
+        // Координаты
+
+        x: 0,
+        y: 0,
+
+        //Состояние click
+
+        down: false,
+    };
+
+
+
+    let cnv = document.getElementById('canvas');
+    let ctx = cnv.getContext('2d');
+    let width = 500, height = 300;
+
+    cnv.width = width;
+    cnv.height = height;
+    cnv.style.backgroundColor = '#d9ff9e';
+
+    ctx.fillStyle = '#985d5d';
+    ctx.strokeStyle = '#001eff';
+    ctx.lineWidth = 3;
+
+    let Rect = function (x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    };
+    Rect.prototype = {
+        draw : function () {
+            ctx.fillRect(this.x, this.y, this.w, this.h)
+        },
+        stroke : function () {
+            ctx.strokeRect(this.x, this.y, this.w, this.h)
+        },
+    };
+
+
+
+    let i, rect = [];
+    for(i = 0; i < 5 ; i++ ){
+        rect.push( new Rect(50 + i * (50 + 20), 50, 50, 50) );
+    }
+    setInterval(function () {
+        for (i in rect){
+            rect[i].draw();
+        }
+
+    }, 30);
+
+
+
+//     Событие - onMuseMove
+//
+    window onMuseMove = function(event) {
+        mouse x = e pageX;
+        mouse y = e pageY;
+    };
+
+    // На зажатие кнопки миши
+
+    window onMuseMove = function(event) {
+        mouse x = e pageX;
+        mouse y = e pageY;
+    }
+
+
+</script>
+
+</body>
+</html>

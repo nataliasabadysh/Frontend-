@@ -45,8 +45,15 @@ class Hamburger {
      * Убрать topping, при условии, что она ранее была добавлена
      * @param {String} topping - Тип добавки
      */
-    removeTopping(topping) {
 
+    // removeTopping(topping) {
+    //     if (this._toppings.includes(topping)) {
+    //         this._toppings.splice(this._toppings.indexOf(topping), 1);
+    //     }
+    // }
+
+    removeTopping(topping) {
+        this._toppings = this._toppings.filter(key =>!key === topping)
     }
 
     /**
@@ -91,25 +98,26 @@ class Hamburger {
         return this.stuffing;
     }
 
-
     /**
      * Узнать цену гамбургера
-     * @returns {Number} - Цена в деньгах
-     *
-     * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
+     * @return {Number} Цена в деньгах
      */
-
     calculatePrice() {
+        let price = Hamburger.prices[this.keyFromValue(this.stuffing)];
+        price = this.toppings.reduce( (a, t) => a + Hamburger.prices[this.keyFromValue(t)], price);
+        price *= Hamburger.getSizeMultiplier(this.size);
+        return price;
     }
-
 
     /**
      * Узнать калорийность
-     * @returns {Number} - Калорийность в калориях
-     *
-     * Попробуйте сделать это геттером чтобы можно было обращаться как obj.calories и нам вернет сумму.
+     * @return {Number} Калорийность в калориях
      */
     calculateCalories() {
+        let calories = Hamburger.calories[this.keyFromValue(this.stuffing)];
+        calories = this.toppings.reduce( (a, t) => a + Hamburger.calories[this.keyFromValue(t)], calories);
+        calories *= Hamburger.getSizeMultiplier(this.size);
+        return calories;
     }
 }
 
