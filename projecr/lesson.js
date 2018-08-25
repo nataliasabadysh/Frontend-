@@ -393,21 +393,22 @@ const grid = $qs('.notes-grid');
 function createGridItems(arr) {
     return arr.reduce((acc, el) => acc.concat(createNote(el)), []);
 }
+
 const markup = createGridItemsMarkup(notesList);
 grid.innerHTML = markup;   // innerHTML = распарсим
-
-function createGridItemsMarkup(arr) {
-    return arr.reduce(
-        (acc, obj) => acc + createNoteMarkup(obj),
-        ''
-    );
-
-    // let markup = '';
-    // arr.forEach(note => {
-    //   const html = createNoteMarkup(note);
-    //   markup += html; });
-    // return markup;
-}
+//
+// function createGridItemsMarkup(arr) {
+//     return arr.reduce(
+//         (acc, obj) => acc + createNoteMarkup(obj),
+//         ''
+//     );
+//
+//     // let markup = '';
+//     // arr.forEach(note => {
+//     //   const html = createNoteMarkup(note);
+//     //   markup += html; });
+//     // return markup;
+// }
 
 function createNoteMarkup({ text, date }) {
     return `

@@ -16,39 +16,72 @@
 
 const posts = [
     {
-        img: "https://placeimg.com/400/150/arch",
+        img: "https://loremflickr.com/640/360",
         title: "Post title 1",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
         link: 'link-1.com'
     },
     {
-        img: "https://placeimg.com/400/150/nature",
+        img: "https://loremflickr.com/640/360",
         title: "Post title 2",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
         link: 'link-2.com'
     },
     {
-        img: "https://placeimg.com/400/150/arch",
+        img: "https://loremflickr.com/640/360",
         title: "Post title 3",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
         link: 'link-3.com'
     }
 ];
 
-const wrapper = document.querySelector('.wrapper');
 
-const createPostCard = ({img, title, text, link}) => {
-
-       return `
-          <div class="post">
-            <img src="${img}" class="post__image" alt="post image">
-            <h2 class ="post__title">${title}</h2>
-            <p class="post__text">${text}</p>>
-            <a class="button" href="${link}">Read more</a>
-         </div>    
-       `;
-};
-function createCards(arr) {
+function createPost() {
 
 
+    const card = document.createElement('div');
+    card.classList.add('postCard');                     // <div class = "postCard">
+
+    const postImage = document.createElement('img');    // <img class="post__image" src="img" alt="post image">
+    postImage.classList.add('post__image');
+    postImage.setAttribute('src', 'img');
+    postImage.setAttribute('alt', 'post image');
+    card.appendChild(postImage);                        // div =>+  <img >
+
+
+    const postTitle = document.createElement('h2');     //<h2 class="post__title">title</h2>
+    postTitle.classList.add('post__title');
+    postTitle.textContent = 'title';
+    card.appendChild(postTitle);                        // div =>+  < h2 >
+
+    const postText = document.createElement('p');       // <p class="post__text">title</p>
+    postText.classList.add('post__text');
+    postText.textContent = 'text';
+    card.appendChild(postText);                         // div =>+  < p >
+
+
+    const button = document.createElement('a');         // <a class="button" href="link"></a>
+    button.classList.add('button');
+    button.setAttribute('href', 'link');
+    card.appendChild(button);                           // div =>+  < a >
+
+    const postItem = document.querySelector('wrapper');  // in html div + то что мы создали
+    postItem.appendChild(card);                         // Динамисески создали
+    console.log(card);
+
+    return card;
 }
+
+
+// ==== ///
+// const createPostCard = ({img, title, text, link}) => {
+//     return `
+//           <div class="post">
+//             <img src="${img}" class="post__image" alt="post image">
+//             <h2 class ="post__title">${title}</h2>
+//             <p class="post__text">${text}</p>>
+//             <a class="button" href="${link}">Read more</a>
+//          </div>
+//        `;
+// };
+
