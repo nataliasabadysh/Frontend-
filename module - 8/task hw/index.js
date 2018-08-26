@@ -36,7 +36,7 @@ const posts = [
 ];
 
 
-function createPost() {
+// function createPost() {
 
 
     const card = document.createElement('div');
@@ -69,21 +69,8 @@ function createPost() {
     postItem.appendChild(card);                         // Динамисески создали
     console.log(card);
 
-    return card;
-}
-const createPostCards = (posts) => {
-    const elements = posts.map(post => createPostCard(post));
-
-    return elements;
-};
-
-const mainPost = document.querySelector('.main-post');
-const cards = createPostCards(posts);
-
-mainPost.append(...cards);
-
-
-
+//     return card;
+// }
 
 
 // ==== ///
