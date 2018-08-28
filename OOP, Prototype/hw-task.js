@@ -102,22 +102,16 @@ class Hamburger {
      * Узнать цену гамбургера
      * @return {Number} Цена в деньгах
      */
-    calculatePrice() {
-        let price = Hamburger.prices[this.keyFromValue(this.stuffing)];
-        price = this.toppings.reduce( (a, t) => a + Hamburger.prices[this.keyFromValue(t)], price);
-        price *= Hamburger.getSizeMultiplier(this.size);
-        return price;
+    get price() {
+        return (Hamburger.SIZES[this._size].price) +
+            (Hamburger.STUFFINGS[this._stuffing].price) +
+            (this._toppings.reduce((sum, elem) => sum + Hamburger.TOPPINGS[elem].price, 0));
     }
 
-    /**
-     * Узнать калорийность
-     * @return {Number} Калорийность в калориях
-     */
-    calculateCalories() {
-        let calories = Hamburger.calories[this.keyFromValue(this.stuffing)];
-        calories = this.toppings.reduce( (a, t) => a + Hamburger.calories[this.keyFromValue(t)], calories);
-        calories *= Hamburger.getSizeMultiplier(this.size);
-        return calories;
+    get calories() {
+        return (Hamburger.SIZES[this._size].calories) +
+            (Hamburger.STUFFINGS[this._stuffing].calories) +
+            (this._toppings.reduce((sum, elem) => sum + Hamburger.TOPPINGS[elem].calories, 0));
     }
 }
 
@@ -165,16 +159,16 @@ const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE)
 hamburger.addTopping(Hamburger.TOPPING_SPICE);
 
 // Спросим сколько там калорий
-console.log("Calories: ", hamburger.calculateCalories());
+console.log("Calories: ", hamburger.calories);
 
 // Сколько стоит?
-console.log("Price: ", hamburger.calculatePrice());
+console.log("Price: ", hamburger.price);
 
 // Я тут передумал и решил добавить еще соус
 hamburger.addTopping(Hamburger.TOPPING_SAUCE);
 
 // А сколько теперь стоит?
-console.log("Price with sauce: ", hamburger.calculatePrice());
+console.log("Price with sauce: ", hamburger.price);
 
 // Проверить, большой ли гамбургер?
 console.log("Is hamburger large: ", hamburger.getSize() === Hamburger.SIZE_LARGE); // -> false
