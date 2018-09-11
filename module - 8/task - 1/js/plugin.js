@@ -30,28 +30,28 @@
 
 // = 3 - 
 
-const parent = document.querySelector("#parent");
-const child = document.querySelector("#child");
-const innerChild = document.querySelector("#inner-child");
-
-const parentHandler = () => {
-  alert(
-    "При клике в INNER-CHILD, этого alert не будет, до PARENT event не дойдет!"
-  );
-};
-
-const childHandler = () => {
-  alert(
-    "При клике в INNER-CHILD, этого alert не будет, до CHILD event не дойдет!"
-  );
-};
-
-const innerChildHandler = event => {
-  event.stopPropagation();
-  alert("INNER-CHILD click handler!");
-};
-
-parent.addEventListener("click", parentHandler);
-child.addEventListener("click", childHandler);
-innerChild.addEventListener("click", innerChildHandler);
-
+// const parent = document.querySelector("#parent");
+// const child = document.querySelector("#child");
+// const innerChild = document.querySelector("#inner-child");
+//
+// const parentHandler = () => {
+//   alert(
+//     "При клике в INNER-CHILD, этого alert не будет, до PARENT event не дойдет!"
+//   );
+// };
+//
+// const childHandler = () => {
+//   alert(
+//     "При клике в INNER-CHILD, этого alert не будет, до CHILD event не дойдет!"
+//   );
+// };
+//
+// const innerChildHandler = event => {
+//   event.stopPropagation();
+//   alert("INNER-CHILD click handler!");
+// };
+//
+// parent.addEventListener("click", parentHandler);
+// child.addEventListener("click", childHandler);
+// innerChild.addEventListener("click", innerChildHandler);
+//

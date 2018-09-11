@@ -2,18 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const noteEditor = document.querySelector('.js-note-editor');
     const noteEditorInput = noteEditor.querySelector('input');
 
-    const modalInput = document.querySelector('.modal input');
+//    const modalInput = document.querySelector('.modal input');
     const noteList = document.querySelector('.note-list');
     const page = document.querySelector('.page');
     const closeModalBtn = document.querySelector('button[data-action="close-modal"]',);
-    const saveModalBtn = document.querySelector('button[data-action="note-save"]',);
+ //   const saveModalBtn = document.querySelector('button[data-action="note-save"]',);
 
-    let elementInEdit = null;
+//    let elementInEdit = null;
 
     noteEditor.addEventListener('submit', handleSubmit);
+
     noteList.addEventListener('click', handleNoteListClick);
     closeModalBtn.addEventListener('click', handleCloseModal);
-    saveModalBtn.addEventListener('click', handleSaveNote);
+
+ //   saveModalBtn.addEventListener('click', handleSaveNote);
 
     function handleSubmit(evt) {
         evt.preventDefault();
@@ -30,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nodeName !== 'BUTTON') return;
 
 // Посмотрив в зависимочти чего  action будет
+
         const action = target.dataset.action;
-        switch (action) {
+
+        switch (action) {                       // Лучше использовать шаблоны проетирования вместо СВИЧ
             case 'delete-note':
                 deleteNote(target);
                 break;
@@ -45,12 +49,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const parent = target.closest('.note');
         parent.remove();
     }
+
     function editNote(target) {
-        const parentLi = target.closest('.note');
-        const paragraph = parentLi.querySelector('p');
+      //  найдем р в разметке
+        const parentLi = target.closest('.note'); // наша li
+        const paragraph = parentLi.querySelector('p');  // наша р с разметки
+        const text = paragraph.text; // текст у р
 
         elementInEdit = parentLi;
-        handleOpenModal(paragraph.textContent);
+        handleOpenModal(text);         // handleOpenModal - открываем модал окно !*
     }
 
 
@@ -68,8 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         noteList.insertAdjacentHTML('afterbegin', markup);
     }
 
-
-    //
+    // Modal windov
 
     function handleOpenModal(text) {
         modalInput.value = text;

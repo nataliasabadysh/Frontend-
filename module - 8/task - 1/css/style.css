@@ -1,20 +1,5 @@
-#parent, #child, #inner-child {
-  margin: 1rem;
-  padding: 16px;
-  outline: 1px solid #FFC107;
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-#parent {
-  background-color: #673AB7;
-}
-
-#child {
-  background-color: #448AFF;
-}
-
-#inner-child {
-  background-color: #009688;
+.btn{
+  background-color: darkturquoise;
+  padding: 0 30px;
+  color: black;
 }

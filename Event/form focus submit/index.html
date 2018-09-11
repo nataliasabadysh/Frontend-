@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webinar 14-06</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--<script src="js/plugin.js defer"></script> defer - загрузка после html страницы -->
+</head>
+
+<body>
+
+<h1 class="title">Simple validation</h1>
+<form action="#" name="form1">
+  <fieldset>
+    <h2>onfocus/onblur:</h2><br>
+    <label for="name">Name</label>
+    <input placeholder="Enter your name" type="text" name="name" id="name" />
+    <p>Result</p>
+  </fieldset>
+  <fieldset>
+    <h2>onchange:</h2><br>
+    <label for="age">Age</label>
+    <input placeholder="Enter your age" type="text" name="age" id="age" />
+    <p>Result</p><br>
+    <select>
+      <option value="0">Item 0</option>
+      <option value="1">Item 1</option>
+      <option value="2">Item 2</option>
+    </select>
+    <p></p>
+  </fieldset>
+  <fieldset>
+    <h2>oninput:</h2><br>
+    <label for="test">Name</label>
+    <input placeholder="Type text" type="text" name="test" id="test" />
+    <p>Result</p>
+  </fieldset>
+</form>
+
+
+<hr>
+
+<h1 class="title">Form submit</h1>
+<form action="#" name="loginForm">
+  <fieldset>
+    <div class="field-holder">
+      <label for="name">Login</label>
+      <input placeholder="Enter your name" type="text" name="name" id="name" data-valid/>
+    </div>
+    <div class="field-holder">
+      <label for="age">Password</label>
+      <input placeholder="Enter your passsword" type="password" name="age" id="age" data-valid />
+    </div>
+    <input type="submit" value="Send!">
+    <p></p>
+  </fieldset>
+</form>
+
+  <hr>
+
+  <h1 class="title"> INPUT task 3</h1>
+  <form action="#" name="form1">
+    <fieldset>
+      <ul class="elements">
+        <li>
+          <input value="text input" type="text" name="in1" id="in1" />
+          <label for="in1">Эта лэйба связана с инпутом через id</label>
+        </li>
+        <li>
+          <select name="select" id="select1">
+            <option value="1">Харьков</option>
+            <option value="2" selected>Киев</option>
+            <option value="3">Львов</option>
+          </select>
+          <label for="select1">Эта лэйба тоже связана с select через id</label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" checked/>
+            Этот checkbox внутри лэйбы, поэтому они вместе связаны
+          </label>
+        </li>
+      </ul>
+      </p>
+    </fieldset>
+  </form>
+  <script src="js/plugin.js "></script>
+
+
+
+</body>
+
+</html>

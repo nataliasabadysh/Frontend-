@@ -2,9 +2,14 @@
 
 const form = document.querySelector(".form");
 const loginInput = form.querySelector('input[type="text"]');
+
 const passInput = form.querySelector('input[type="password"]');
 
 form.addEventListener("submit", handleSubmit);
+
+// Сначала обработчик addEventListener а потом метод , иначе метод не вспливает
+loginInput.focus(); // В активном состоянии при загрузке страници   метод -focus();
+
 
 function handleSubmit(event) {
     // Предотвращаем поведение по умолчанию
