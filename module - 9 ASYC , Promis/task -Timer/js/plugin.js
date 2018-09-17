@@ -35,13 +35,13 @@ const timer = {
 };
 
 startBtn.addEventListener('click', handleStartBtnClick); // bind убрали
-stopBtn.addEventListener('click',timer.stop.bind(timer));
+stopBtn.addEventListener('click',timer.reset.bind(timer));
 
 function handleStartBtnClick() {
     if (!timer.isActive) {
-        timer.start();      // Первый раз запустили
+        timer.start(); // Первый раз запустили
         this.textContent = 'Pause';
-    } else {                // А если он активный
+    } else { // А если он активный
         timer.stop();
         this.textContent = 'Continue';
     }
@@ -49,7 +49,7 @@ function handleStartBtnClick() {
 
 
 function updateClockFace(time) {
-    const formateredTime =  formatTime(time);
+    const formateredTime = formatTime(time);
     clockFace.textContent = formateredTime;
 }
 
